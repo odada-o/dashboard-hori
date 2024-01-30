@@ -1,13 +1,13 @@
-import { Box, Container } from '@chakra-ui/react'
+import { Box, Container, Heading } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 
 const Header = () => {
     return (
-        <Box as="header" borderBottom={'3px solid'} borderColor={'red'}>
-            <Container display={['block', null, 'flex']} justifyContent="space-between">
-                <h1 style={{ width: '50px', height: '100%' }}>
-                    <a href="/">Dashboard</a>
-                </h1>
+        <Box as="header" borderBottom={'1px solid'} borderColor={'#eee'}>
+            <Container display={['block', null, 'flex']} justifyContent="space-between" alignItems={'center'}>
+                <Heading fontSize={24}>
+                    <Link to="/">Dashboard</Link>
+                </Heading>
                 <nav>
                     <ul>
                         <li>
