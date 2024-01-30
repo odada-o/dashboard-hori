@@ -1,20 +1,25 @@
 const Header = () => {
     return (
         <header>
-            <h1>JUST쇼핑몰</h1>
+            <h1>
+                <a href="/">Dashboard</a>
+            </h1>
             <nav>
                 <ul>
                     <li>
-                        <a href="/">아우터</a>
+                        <a href="/">Main Dashboard</a>
                     </li>
                     <li>
-                        <a href="/">팬츠</a>
+                        <a href="/marketplace">NFT Marketplace</a>
                     </li>
                     <li>
-                        <a href="/">악세사리</a>
+                        <a href="/datatables">Data Tables</a>
                     </li>
                     <li>
-                        <a href="/">신발</a>
+                        <a href="/profile">Profile</a>
+                    </li>
+                    <li>
+                        <a href="/signin">Sign In</a>
                     </li>
                 </ul>
             </nav>
