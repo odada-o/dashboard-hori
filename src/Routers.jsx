@@ -5,15 +5,36 @@ import DataTables from './views/DataTables'
 import Profile from './views/Profile'
 import Signin from './views/Signin'
 
+const routeArr = [
+    {
+        path: '/',
+        element: <Home />,
+    },
+    {
+        path: '/marketplace',
+        element: <MarketPlace />,
+    },
+    {
+        path: '/datatables',
+        element: <DataTables />,
+    },
+    {
+        path: '/profile',
+        element: <Profile />,
+    },
+    {
+        path: '/signin',
+        element: <Signin />,
+    },
+]
+
 const Routers = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/marketplace" element={<MarketPlace />} />
-                <Route path="/datatables" element={<DataTables />} />
-                <Route path="/profile" element={<Profile />} />
-                <Route path="/signin" element={<Signin />} />
+                {routeArr.map((item, index) => (
+                    <Route key={index} path={item.path} element={item.element} />
+                ))}
             </Routes>
         </BrowserRouter>
     )
