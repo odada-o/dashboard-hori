@@ -1,11 +1,10 @@
 import { Box, Container } from '@chakra-ui/react'
+import ContainerLg from './Container'
 
 const Footer = () => {
     return (
         <Box as="footer" h={20} bg={'#eee'}>
-            <Container maxW={1280} m={'0 auto'}>
-                Footer
-            </Container>
+            <ContainerLg>Footer</ContainerLg>
         </Box>
     )
 }

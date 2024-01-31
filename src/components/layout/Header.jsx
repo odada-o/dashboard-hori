@@ -2,47 +2,41 @@ import { Box, ButtonGroup, Container, Heading, IconButton } from '@chakra-ui/rea
 import { SearchIcon, SunIcon } from '@chakra-ui/icons'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import ContainerLg from './Container'
 
 const Header = () => {
     return (
         <Box as="header" borderBottom={'1px solid'} borderColor={'#eee'}>
-            <Container
-                centerContent
-                flexDir={'row'}
-                maxW={1280}
-                m={'0 auto'}
-                display={['block', null, 'flex']}
-                justifyContent="space-between"
-                alignItems={'center'}
-                h={100}
-            >
-                <Heading fontSize={24}>
-                    <Link to="/">Dashboard</Link>
-                </Heading>
-                <Nav>
-                    <NavList>
-                        <li>
-                            <Link to="/">Main Dashboard</Link>
-                        </li>
-                        <li>
-                            <Link to="/marketplace">NFT Marketplace</Link>
-                        </li>
-                        <li>
-                            <Link to="/datatables">Data Tables</Link>
-                        </li>
-                        <li>
-                            <Link to="/profile">Profile</Link>
-                        </li>
-                        <li>
-                            <Link to="/signin">Sign In</Link>
-                        </li>
-                    </NavList>
-                </Nav>
-                <IconBtnGroup>
-                    <IconButton aria-label="Search database" icon={<SearchIcon />} />
-                    <IconButton aria-label="Light database" icon={<SunIcon />} />
-                </IconBtnGroup>
-            </Container>
+            <ContainerLg>
+                <Box display={['block', null, 'flex']} h={100} alignItems={'center'} justifyContent={'space-between'}>
+                    <Heading fontSize={24}>
+                        <Link to="/">Dashboard</Link>
+                    </Heading>
+                    <Nav>
+                        <NavList>
+                            <li>
+                                <Link to="/">Main Dashboard</Link>
+                            </li>
+                            <li>
+                                <Link to="/marketplace">NFT Marketplace</Link>
+                            </li>
+                            <li>
+                                <Link to="/datatables">Data Tables</Link>
+                            </li>
+                            <li>
+                                <Link to="/profile">Profile</Link>
+                            </li>
+                            <li>
+                                <Link to="/signin">Sign In</Link>
+                            </li>
+                        </NavList>
+                    </Nav>
+                    <IconBtnGroup>
+                        <IconButton aria-label="Search database" icon={<SearchIcon />} />
+                        <IconButton aria-label="Light database" icon={<SunIcon />} />
+                    </IconBtnGroup>
+                </Box>
+            </ContainerLg>
         </Box>
     )
 }
