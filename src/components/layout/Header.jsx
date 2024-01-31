@@ -1,11 +1,21 @@
-import { Box, Container, Heading } from '@chakra-ui/react'
+import { Box, ButtonGroup, Container, Heading, IconButton } from '@chakra-ui/react'
+import { SearchIcon, SunIcon } from '@chakra-ui/icons'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 const Header = () => {
     return (
         <Box as="header" borderBottom={'1px solid'} borderColor={'#eee'}>
-            <Container display={['block', null, 'flex']} justifyContent="space-between" alignItems={'center'}>
+            <Container
+                centerContent
+                flexDir={'row'}
+                maxW={1280}
+                m={'0 auto'}
+                display={['block', null, 'flex']}
+                justifyContent="space-between"
+                alignItems={'center'}
+                h={100}
+            >
                 <Heading fontSize={24}>
                     <Link to="/">Dashboard</Link>
                 </Heading>
@@ -28,14 +38,23 @@ const Header = () => {
                         </li>
                     </NavList>
                 </Nav>
+                <IconBtnGroup>
+                    <IconButton aria-label="Search database" icon={<SearchIcon />} />
+                    <IconButton aria-label="Light database" icon={<SunIcon />} />
+                </IconBtnGroup>
             </Container>
         </Box>
     )
 }
-
+// const 변수이름 = styled(컴포넌트 이름)`속성: 값;`
+const IconBtnGroup = styled(ButtonGroup)`
+    button {
+        background: red;
+    }
+`
+// const 변수이름 = styled.태그이름`속성: 값;`
 const Nav = styled.nav`
-    height: 100px;
-    background: lightblue;
+    height: 100%;
 `
 
 const NavList = styled.ul`
