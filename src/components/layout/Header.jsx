@@ -1,5 +1,6 @@
 import { Box, Container, Heading } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
+import styled from 'styled-components'
 
 const Header = () => {
     return (
@@ -8,8 +9,8 @@ const Header = () => {
                 <Heading fontSize={24}>
                     <Link to="/">Dashboard</Link>
                 </Heading>
-                <nav>
-                    <ul>
+                <Nav>
+                    <NavList>
                         <li>
                             <Link to="/">Main Dashboard</Link>
                         </li>
@@ -25,11 +26,44 @@ const Header = () => {
                         <li>
                             <Link to="/signin">Sign In</Link>
                         </li>
-                    </ul>
-                </nav>
+                    </NavList>
+                </Nav>
             </Container>
         </Box>
     )
 }
+
+const Nav = styled.nav`
+    height: 100px;
+    background: lightblue;
+`
+
+const NavList = styled.ul`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+    margin: 0;
+    list-style: none;
+    li {
+        width: 100%;
+        text-align: center;
+    }
+    a {
+        display: block;
+    }
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        li {
+            width: auto;
+        }
+        a {
+            display: inline-block;
+        }
+    }
+`
 
 export default Header
