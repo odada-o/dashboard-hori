@@ -9,7 +9,7 @@ const Header = () => {
         <Box as="header" borderBottom={'1px solid'} borderColor={'#eee'}>
             <ContainerLg>
                 <Box display={['block', null, 'flex']} h={100} alignItems={'center'} justifyContent={'space-between'}>
-                    <Heading fontSize={24}>
+                    <Heading fontSize={24} color={'brand.100'}>
                         <Link to="/">Dashboard</Link>
                     </Heading>
                     <Nav>
