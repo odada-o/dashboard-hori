@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Home from './views'
+import Home from './views/Home'
 import MarketPlace from './views/MarketPlace'
 import DataTables from './views/DataTables'
 import Profile from './views/Profile'

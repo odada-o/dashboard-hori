@@ -1,4 +1,4 @@
-import { Box, ButtonGroup, Container, Heading, IconButton } from '@chakra-ui/react'
+import { Box, ButtonGroup, Button, Heading, IconButton } from '@chakra-ui/react'
 import { SearchIcon, SunIcon } from '@chakra-ui/icons'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
@@ -9,9 +9,9 @@ const Header = () => {
         <Box as="header" borderBottom={'1px solid'} borderColor={'#eee'}>
             <ContainerLg>
                 <Box display={['block', null, 'flex']} h={100} alignItems={'center'} justifyContent={'space-between'}>
-                    <Heading fontSize={24} color={'brand.100'}>
+                    <Logo fontSize={24}>
                         <Link to="/">Dashboard</Link>
-                    </Heading>
+                    </Logo>
                     <Nav>
                         <NavList>
                             <li>
@@ -31,21 +31,27 @@ const Header = () => {
                             </li>
                         </NavList>
                     </Nav>
-                    <IconBtnGroup>
+                    <ButtonGroup bg={{ sm: 'blue', md: 'red', lg: 'yellow' }}>
                         <IconButton aria-label="Search database" icon={<SearchIcon />} />
                         <IconButton aria-label="Light database" icon={<SunIcon />} />
-                    </IconBtnGroup>
+                    </ButtonGroup>
                 </Box>
             </ContainerLg>
         </Box>
     )
 }
-// const 변수이름 = styled(컴포넌트 이름)`속성: 값;`
-const IconBtnGroup = styled(ButtonGroup)`
-    button {
-        background: red;
-    }
+
+const Logo = styled.h1`
+    font-size: 24px;
+    color: ${({ theme }) => theme.colors.brand[500]};
 `
+
+// const 변수이름 = styled(컴포넌트 이름)`속성: 값;`
+// const IconBtnGroup = styled(ButtonGroup)`
+//     button {
+//         background: red;
+//     }
+// `
 // const 변수이름 = styled.태그이름`속성: 값;`
 const Nav = styled.nav`
     height: 100%;
