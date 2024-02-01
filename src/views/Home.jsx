@@ -11,7 +11,7 @@ const Home = () => {
                     <Button variant="outline" colorScheme="blue">
                         Save
                     </Button>
-                    <Button variant="outline">Cancel</Button>
+                    <Button variant="cancel">Cancel</Button>
                 </ButtonGroup>
                 <Title>회사 소개</Title>
                 <TitleH4>사장님 말씀</TitleH4>

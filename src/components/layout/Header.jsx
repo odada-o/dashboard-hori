@@ -3,6 +3,7 @@ import { SearchIcon, SunIcon } from '@chakra-ui/icons'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import ContainerLg from './Container'
+import { lighten } from 'polished'
 
 const Header = () => {
     return (
@@ -41,9 +42,11 @@ const Header = () => {
     )
 }
 
-const Logo = styled.h1`
+const Logo = styled(Heading)`
     font-size: 24px;
-    color: ${({ theme }) => theme.colors.brand[500]};
+    /* color: ${({ theme }) => theme.colors.brand[500]}; */
+    /* background: ${lighten(0.5, '#ff0000')}; */
+    /* ${({ theme }) => theme.colors.brand[500]} */
 `
 
 // const 변수이름 = styled(컴포넌트 이름)`속성: 값;`
@@ -55,6 +58,7 @@ const Logo = styled.h1`
 // const 변수이름 = styled.태그이름`속성: 값;`
 const Nav = styled.nav`
     height: 100%;
+    /* background-color: ${({ theme }) => lighten(0.2, theme.colors.yellow[100])}; */
 `
 
 const NavList = styled.ul`

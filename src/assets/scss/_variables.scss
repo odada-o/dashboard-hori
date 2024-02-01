@@ -1,39 +1,34 @@
-// @import '~vuetify/src/styles/styles.sass';
-// https://vuetifyjs.com/en/features/sass-variables/#installation
-
-:root {
-    --v-layout-bottom: 60px;
-}
+@use 'sass:math';
+@use 'sass:map';
+@use 'sass:meta';
+@use 'vuetify/lib/styles/tools/functions' as *;
 
 // color
 $txtDefult: #202020;
-$primary: #438bf9;
-$primaryLight: #5a5e71;
-$primaryLight2: #e9f2ff;
-$primaryLight3: #a6aac2;
-$primaryDark: #111b56;
+
+$primary: (
+    base: #438bf9,
+    Light: #5a5e71,
+    Light2: #e9f2ff,
+    Light2Lighten: lighten($primaryLight2, 2%),
+    Light3: #a6aac2,
+    Dark: #111b56,
+    lighten5: #e9f2ff,
+    lighten4: #c5d9ff,
+    lighten3: #a1c0ff,
+    lighten2: #7da7ff,
+    lighten1: #599eff,
+    darken1: #3d7ae6,
+    darken2: #2e5fbf,
+    darken3: #1f4499,
+    darken4: #101f73,
+    accent1: #ffffff,
+    accent2: #ffffff,
+    accent3: #ffffff,
+    accent4: #ffffff,
+);
+
 $secondary: #ff5722;
-
-$up: #d61b26;
-$upHover: #fff8f8;
-$upBg: #fbf1ef;
-$upBar: #ffdbdd;
-$down: #1aaba2;
-$down2: #484fce;
-$downHover: #b3fffa;
-$downBg: #f1f8f8;
-$downBar: #d2ebea;
-$flat: #111b56;
-$flatBar: rgba($flat, 0.1);
-
-$lineSearch: #e1eaf9;
-$lineGray: #e7e7eb;
-
-$white: #fff;
-$black: #000;
-$baseBackground: #f7f7fb;
-$background: #f7f7fb;
-$bgChart2: #e6e9ef;
 
 $gray-100: #f5f5f5;
 $gray-200: #eeeeee;
@@ -60,5 +55,5 @@ $hdH: 70px;
 $botHd: 60px;
 $bdR36: 36px;
 
-// vcard
-$card-box-shadow: none;
+$spacingX: 1rem;
+$spacingY: 1rem;
