@@ -92,7 +92,8 @@ export const globalStyles = {
     styles: {
         global: (props) => ({
             body: {
-                overflowX: 'hidden',
+                minW: '330px',
+                // overflowX: 'hidden',
                 bg: mode('white', 'navy.900')(props),
                 fontFamily: '"Noto Sans KR", "sans-serif"',
                 letterSpacing: '-0.5px',
@@ -105,6 +106,9 @@ export const globalStyles = {
             },
             html: {
                 fontFamily: '"Noto Sans KR", "sans-serif"',
+            },
+            'ul > li': {
+                listStyle: 'none',
             },
             '.chakra-container': {
                 maxWidth: 'calc(1280px + var(--chakra-space-4) * 2) !important',

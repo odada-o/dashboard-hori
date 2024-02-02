@@ -9,7 +9,7 @@ const Layout = (props) => {
             <Header />
             <Box as="main" id="main" flexGrow={1}>
                 <ContainerLg py={4}>
-                    <h2>{props.title}</h2>
+                    {props.showTitle && <h2>{props.title}</h2>}
                     {props.children}
                 </ContainerLg>
             </Box>

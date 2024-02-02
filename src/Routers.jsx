@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Home from './views/Home'
-import MarketPlace from './views/MarketPlace'
-import DataTables from './views/DataTables'
-import Profile from './views/Profile'
-import Signin from './views/Signin'
+import Home from './views/home/Home'
+import MarketPlace from './views/marketplace/MarketPlace'
+import DataTables from './views/datatables/DataTables'
+import Profile from './views/profile/Profile'
+import Signin from './views/signin/Signin'
 
 const routeArr = [
     {
