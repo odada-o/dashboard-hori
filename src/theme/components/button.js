@@ -15,8 +15,12 @@ export const buttonStyles = {
                 },
             },
             variants: {
-                cancel: () => ({
-                    bg: 'red',
+                link12: () => ({
+                    height: '32px',
+                    fontSize: '12px',
+                    color: 'white',
+                    'padding-inline-start': '0',
+                    'padding-inline-end': '0',
                 }),
                 outline: () => ({
                     borderRadius: '0',

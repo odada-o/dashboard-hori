@@ -1,4 +1,4 @@
-import { Box, ButtonGroup, Button, Heading, IconButton } from '@chakra-ui/react'
+import { Box, ButtonGroup, Button, Heading, IconButton, Container, UnorderedList, ListItem } from '@chakra-ui/react'
 import { SearchIcon, SunIcon } from '@chakra-ui/icons'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
@@ -7,86 +7,68 @@ import { lighten } from 'polished'
 
 const Header = () => {
     return (
-        <Box as="header" borderBottom={'1px solid'} borderColor={'#eee'}>
-            <ContainerLg>
-                <Box display={['block', null, 'flex']} h={100} alignItems={'center'} justifyContent={'space-between'}>
-                    <Logo fontSize={24}>
+        <Box as="header" bg="rgba(0,0,0,.1)" backdropFilter={'saturate(180%) blur(15px)'}>
+            {/* tab */}
+            <Box display={['none', null, null, null, 'block']} h={'32px'} bg={'rgba(0,0,0,.6)'}>
+                <Container display="flex" justifyContent={'space-between'} alignItems={'center'}>
+                    <ButtonGroup gap={'10px'}>
+                        <Button colorScheme="teal" variant="link12">
+                            공공 기관용
+                        </Button>
+                        <Button colorScheme="teal" variant="link12">
+                            금융 클라우드
+                        </Button>
+                    </ButtonGroup>
+                    <ButtonGroup gap={'10px'}>
+                        <Button colorScheme="teal" variant="link12">
+                            로그인
+                        </Button>
+                        <Button colorScheme="teal" variant="link12">
+                            회원가입
+                        </Button>
+                        <Button colorScheme="teal" variant="link12">
+                            Languages
+                        </Button>
+                    </ButtonGroup>
+                </Container>
+            </Box>
+            {/* header */}
+            <Box bg={'rgba(0,0,0,.05)'}>
+                <Container
+                    display={['block', null, 'flex']}
+                    h={100}
+                    alignItems={'center'}
+                    justifyContent={'space-between'}
+                >
+                    <Heading as={'h1'} fontSize={24}>
                         <Link to="/">Dashboard</Link>
-                    </Logo>
-                    <Nav>
-                        <NavList>
-                            <li>
-                                <Link to="/">Main Dashboard</Link>
-                            </li>
-                            <li>
-                                <Link to="/marketplace">NFT Marketplace</Link>
-                            </li>
-                            <li>
-                                <Link to="/datatables">Data Tables</Link>
-                            </li>
-                            <li>
-                                <Link to="/profile">Profile</Link>
-                            </li>
-                            <li>
-                                <Link to="/signin">Sign In</Link>
-                            </li>
-                        </NavList>
-                    </Nav>
+                    </Heading>
+
+                    <UnorderedList display={'flex'} gap={'20px'}>
+                        <ListItem>
+                            <Link to="/">Main Dashboard</Link>
+                        </ListItem>
+                        <ListItem>
+                            <Link to="/marketplace">NFT Marketplace</Link>
+                        </ListItem>
+                        <ListItem>
+                            <Link to="/datatables">Data Tables</Link>
+                        </ListItem>
+                        <ListItem>
+                            <Link to="/datatables">Profile</Link>
+                        </ListItem>
+                        <ListItem>
+                            <Link to="/datatables">Sign In</Link>
+                        </ListItem>
+                    </UnorderedList>
                     <ButtonGroup bg={{ sm: 'blue', md: 'red', lg: 'yellow' }}>
                         <IconButton aria-label="Search database" icon={<SearchIcon />} />
                         <IconButton aria-label="Light database" icon={<SunIcon />} />
                     </ButtonGroup>
-                </Box>
-            </ContainerLg>
+                </Container>
+            </Box>
         </Box>
     )
 }
-
-const Logo = styled(Heading)`
-    font-size: 24px;
-    /* color: ${({ theme }) => theme.colors.brand[500]}; */
-    /* background: ${lighten(0.5, '#ff0000')}; */
-    /* ${({ theme }) => theme.colors.brand[500]} */
-`
-
-// const 변수이름 = styled(컴포넌트 이름)`속성: 값;`
-// const IconBtnGroup = styled(ButtonGroup)`
-//     button {
-//         background: red;
-//     }
-// `
-// const 변수이름 = styled.태그이름`속성: 값;`
-const Nav = styled.nav`
-    height: 100%;
-    /* background-color: ${({ theme }) => lighten(0.2, theme.colors.yellow[100])}; */
-`
-
-const NavList = styled.ul`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    height: 100%;
-    margin: 0;
-    list-style: none;
-    li {
-        width: 100%;
-        text-align: center;
-    }
-    a {
-        display: block;
-    }
-
-    @media screen and (min-width: 768px) {
-        flex-direction: row;
-        li {
-            width: auto;
-        }
-        a {
-            display: inline-block;
-        }
-    }
-`
 
 export default Header
