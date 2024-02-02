@@ -8,10 +8,8 @@ const Layout = (props) => {
         <Box display={'flex'} flexDir={'column'} minH={'100vh'}>
             <Header />
             <Box as="main" id="main" flexGrow={1}>
-                <ContainerLg py={4}>
-                    {props.showTitle && <h2>{props.title}</h2>}
-                    {props.children}
-                </ContainerLg>
+                {props.showTitle && <h2>{props.title}</h2>}
+                {props.children}
             </Box>
             <Footer />
         </Box>

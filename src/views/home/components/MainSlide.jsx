@@ -35,6 +35,7 @@ const MainSlide = () => {
 
 const SwiperWrap = styled(Swiper)`
     img {
+        display: block;
         width: 100%;
         height: 630px;
         object-fit: cover;

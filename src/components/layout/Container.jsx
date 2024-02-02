@@ -9,7 +9,14 @@ const ContainerLg = (props) => {
 }
 
 export const Section = (props) => {
-    return <Box py={4}>{props.children}</Box>
+    // 삼항 연산자
+    // 조건 ? 참일 때 : 거짓일 때
+    const backgroundColor = props.isLightBackground ? 'white' : 'gray.100'
+    return (
+        <Box py={'100px'} bg={backgroundColor}>
+            {props.children}
+        </Box>
+    )
 }
 
 export default ContainerLg
