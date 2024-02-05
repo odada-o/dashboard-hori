@@ -19,6 +19,8 @@ const MarketPlace = () => {
                 animate={{ opacity: 1, x: 100 }}
                 transition={{ ease: 'easeOut', duration: 2 }}
             />
+
+            <div style={{ height: '100vh' }}></div>
         </Layout>
     )
 }
