@@ -12,7 +12,7 @@ const Header = () => {
         const navBelt = document.querySelector('.nav-belt__wrapper') // 헤더
         const navBar = document.querySelector('.nav-bar__wrapper') // 헤더
         const hdHeight = hd.offsetHeight // 헤더 높이
-        const swiperHeight = document.querySelector('.mySwiper').offsetHeight // 슬라이드 높이
+        const swiperHeight = document.querySelector('.main-slide').offsetHeight // 슬라이드 높이
         console.log(scrollY)
         console.log(swiperHeight - hdHeight)
         // 537
