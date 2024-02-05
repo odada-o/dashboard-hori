@@ -1,5 +1,3 @@
-import React, { useEffect } from 'react'
-import { useLocation } from 'react-router-dom'
 import { Box, ButtonGroup, Button, Heading, IconButton, Container, UnorderedList, ListItem } from '@chakra-ui/react'
 import { HamburgerIcon, SearchIcon, SunIcon } from '@chakra-ui/icons'
 import { Link } from 'react-router-dom'
@@ -7,39 +5,35 @@ import Gnb from './Gnb'
 import gsap from 'gsap'
 
 const Header = () => {
-    const location = useLocation() // 현재 위치 정보를 가져옴
-
     // 스크롤 이벤트 함수
-    const handleScroll = () => {
-        // 현재 경로가 '/intro'인 경우에만 애니메이션 실행
-        if (location.pathname === '/') {
-            const scrollY = window.scrollY
-            const hd = document.querySelector('#header')
-            const navBelt = document.querySelector('.nav-belt__wrapper')
-            const navBar = document.querySelector('.nav-bar__wrapper')
-            const hdHeight = hd.offsetHeight
-            const swiperHeight = document.querySelector('.main-slide').offsetHeight
+    const HandleScoll = () => {
+        const scrollY = window.scrollY // 현재 스크롤 위치
+        const hd = document.querySelector('#header') // 헤더
+        const navBelt = document.querySelector('.nav-belt__wrapper') // 헤더
+        const navBar = document.querySelector('.nav-bar__wrapper') // 헤더
+        const hdHeight = hd.offsetHeight // 헤더 높이
+        const swiperHeight = document.querySelector('.topCont')?.offsetHeight || 0 // 슬라이드 높이
+        // ||(or 연산자) : swiperHeight가 없으면 0을 넣어준다.
+        console.log(scrollY)
+        console.log(swiperHeight - hdHeight)
+        // 537
 
-            if (scrollY > swiperHeight - hdHeight) {
-                gsap.to(navBar, { backgroundColor: '#fff', duration: 0.5 })
-                gsap.to(navBelt, { backgroundColor: '#f6f7f8', duration: 0.5 })
-                gsap.to(navBelt.querySelectorAll('button'), { color: '#000', duration: 0.5 })
-            } else {
-                gsap.to(navBar, { backgroundColor: '', duration: 0.5 })
-                gsap.to(navBelt, { backgroundColor: '', duration: 0.5 })
-            }
+        // if : 100px 이상 스크롤 되면 헤더에 배경색을 입힌다.
+        if (scrollY > swiperHeight - hdHeight) {
+            // gsap.to(요소, {옵션})
+            gsap.to(navBar, { backgroundColor: '#fff', duration: 0.5 })
+            gsap.to(navBelt, { backgroundColor: '#f6f7f8', duration: 0.5 })
+
+            gsap.to(navBelt.querySelectorAll('button'), { color: '#000', duration: 0.5 })
+        } else {
+            // else : 100px 이하로 스크롤 되면 배경색을 없앤다.
+            gsap.to(navBar, { backgroundColor: '', duration: 0.5 })
+            gsap.to(navBelt, { backgroundColor: '', duration: 0.5 })
         }
     }
 
-    useEffect(() => {
-        // 스크롤 이벤트 리스너 추가
-        window.addEventListener('scroll', handleScroll)
-
-        // 컴포넌트가 언마운트되거나 경로가 변경될 때 리스너 제거
-        return () => {
-            window.removeEventListener('scroll', handleScroll)
-        }
-    }, [location.pathname])
+    // 스크롤 이벤트 등록
+    window.addEventListener('scroll', HandleScoll)
 
     return (
         <Box
