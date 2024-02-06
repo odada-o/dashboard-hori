@@ -15,7 +15,7 @@ const MarketPlace = () => {
         <Layout title="marketplace" showTitle={false}>
             <Box className="topCont" h={'500px'} bg={`url(${topImg}) no-repeat 50% 50% / cover `}></Box>
             {/* <div>마켓플레이스 컨텐츠</div> */}
-            <Tabs>
+            <Tabs position={'sticky'} top={0}>
                 <TabList>
                     <Tab>One</Tab>
                     <Tab>Two</Tab>
