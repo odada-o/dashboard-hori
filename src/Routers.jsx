@@ -4,6 +4,7 @@ import MarketPlace from './views/marketplace/MarketPlace'
 import DataTables from './views/datatables/DataTables'
 import Profile from './views/profile/Profile'
 import Signin from './views/signin/Signin'
+import Layout from './components/layout/Layout'
 
 const routeArr = [
     {
@@ -33,9 +34,11 @@ const Routers = () => {
     return (
         <BrowserRouter>
             <Routes>
-                {routeArr.map((item, index) => (
-                    <Route key={index} path={item.path} element={item.element} />
-                ))}
+                <Route path="/" element={<Layout />}>
+                    {routeArr.map((item, index) => (
+                        <Route key={index} path={item.path} element={item.element} />
+                    ))}
+                </Route>
             </Routes>
         </BrowserRouter>
     )

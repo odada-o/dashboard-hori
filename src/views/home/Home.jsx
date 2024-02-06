@@ -6,7 +6,7 @@ import { Container } from '@chakra-ui/react'
 
 const Home = () => {
     return (
-        <Layout title="home" showTitle={false}>
+        <>
             <MainSlide />
             <Section isLightBackground={true}>
                 <Container>
@@ -40,7 +40,7 @@ const Home = () => {
                     sint
                 </Container>
             </Section>
-        </Layout>
+        </>
     )
 }
 
