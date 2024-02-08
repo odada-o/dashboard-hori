@@ -1,5 +1,5 @@
-import { Box, Heading } from '@chakra-ui/react'
-import { Link } from 'react-router-dom'
+import { Link as ReactRouterLink } from 'react-router-dom'
+import { Box, Heading, Link } from '@chakra-ui/react'
 import Gnb from './Gnb'
 
 const Header = () => {
@@ -15,7 +15,7 @@ const Header = () => {
                 borderBottom={'1px solid'}
                 borderColor={'lineDefault'}
             >
-                <Link to="/">
+                <Link as={ReactRouterLink} to="/">
                     <strong>HORIZON</strong> FREE
                 </Link>
             </Heading>
