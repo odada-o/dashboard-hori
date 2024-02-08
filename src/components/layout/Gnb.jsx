@@ -3,10 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Gnb = () => {
     return (
-        <UnorderedList display={{ sm: 'none', lg: 'flex' }} gap={'40px'} fontSize={'16px'} color={'white'}>
-            <ListItem>
-                <Link to="/">Main Dashboard</Link>
-            </ListItem>
+        <UnorderedList display={{ sm: 'none', xl: 'block' }} gap={'40px'} fontSize={'16px'}>
             <ListItem>
                 <Link to="/marketplace">NFT Marketplace</Link>
             </ListItem>
@@ -14,10 +11,10 @@ const Gnb = () => {
                 <Link to="/datatables">Data Tables</Link>
             </ListItem>
             <ListItem>
-                <Link to="/datatables">Profile</Link>
+                <Link to="/profile">Profile</Link>
             </ListItem>
             <ListItem>
-                <Link to="/datatables">Sign In</Link>
+                <Link to="/signin">Sign In</Link>
             </ListItem>
         </UnorderedList>
     )

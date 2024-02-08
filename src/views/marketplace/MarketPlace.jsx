@@ -16,8 +16,8 @@ const MarketPlace = () => {
             <Box className="topCont" h={'500px'} bg={`url(${topImg}) no-repeat 50% 50% / cover`}></Box>
             {/* <div>마켓플레이스 컨텐츠</div> */}
 
-            <Image src={topImg} alt="" />
-            <Image src="/logo192.png" alt="" />
+            {/* <Image src={topImg} alt="" /> */}
+            {/* <Image src="/logo192.png" alt="" /> */}
 
             <Tabs position={'sticky'} top={0}>
                 <TabList>
