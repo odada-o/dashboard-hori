@@ -24,9 +24,10 @@ const Layout = () => {
                     spacing={0}
                     pos={'fixed'}
                     top={'27px'}
-                    left={{ sm: '12px', xl: '315px' }}
+                    left={{ sm: '12px', xl: '310px' }}
                     right={'12px'}
-                    p={2}
+                    py={2}
+                    px={{ sm: 2, xl: 4 }}
                     // bg={'rgba(255, 255, 255, 0.1)'}
                     bg={'rgba(255, 0, 0, 0.1)'}
                     backdropFilter={'blur(10px)'}
