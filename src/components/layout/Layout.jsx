@@ -27,8 +27,8 @@ const Layout = () => {
                     left={{ sm: '12px', xl: '315px' }}
                     right={'12px'}
                     p={2}
-                    bg={'rgba(255, 255, 255, 0.1)'}
-                    // bg={'red'}
+                    // bg={'rgba(255, 255, 255, 0.1)'}
+                    bg={'rgba(255, 0, 0, 0.1)'}
                     backdropFilter={'blur(10px)'}
                     borderRadius={'0.75rem'}
                     transition={'all 0.2s'}

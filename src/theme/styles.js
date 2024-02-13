@@ -45,7 +45,7 @@ export const globalStyles = {
                 fontWeight: '400',
                 lineHeight: '1.5',
                 color: mode('gray.900', 'white')(props),
-                bg: mode('blue', 'navy.900')(props),
+                bg: mode('bgDefault', 'navy.900')(props),
                 // bg: 'url("/bg-/m.png") no-repeat 50% 0 / 420px auto',
             },
             '#root': {

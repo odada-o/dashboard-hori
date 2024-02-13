@@ -31,7 +31,7 @@ const Util = () => {
                 </InputLeftElement>
             </InputGroup>
             <Spacer />
-            <ButtonGroup w={'40%'}>
+            <ButtonGroup alignItems={'center'} w={'42%'}>
                 <Button variant="icon">
                     <FaBars />
                     <span className="blind">전체메뉴 보기</span>
