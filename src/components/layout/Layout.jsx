@@ -8,7 +8,7 @@ import DynamicTitle from './DynamicTitle'
 
 const Layout = () => {
     return (
-        <Box display={'flex'} flexDir={'column'} minH={'100vh'} bg={'bgDefault'}>
+        <Box display={'flex'} flexDir={'column'} minH={'100vh'}>
             <Header />
             <Box
                 as="main"
@@ -18,9 +18,25 @@ const Layout = () => {
                 pt={{ sm: 100, xl: 100 }}
                 transition={'all 0.2s'}
             >
-                <Stack spacing={0} pos={'fixed'} top={'27px'} left={{ sm: '20px', xl: '315px' }} right={'20px'}>
-                    <History />
-                    <DynamicTitle />
+                <Stack
+                    direction={{ sm: 'column', md: 'row' }}
+                    justifyContent={'space-between'}
+                    spacing={0}
+                    pos={'fixed'}
+                    top={'27px'}
+                    left={{ sm: '12px', xl: '315px' }}
+                    right={'12px'}
+                    p={2}
+                    bg={'rgba(255, 255, 255, 0.1)'}
+                    // bg={'red'}
+                    backdropFilter={'blur(10px)'}
+                    borderRadius={'0.75rem'}
+                    transition={'all 0.2s'}
+                >
+                    <Box>
+                        <History />
+                        <DynamicTitle />
+                    </Box>
                     <Util />
                 </Stack>
 
@@ -28,7 +44,6 @@ const Layout = () => {
                 {props.children} */}
                 <Outlet />
             </Box>
-            <Footer />
         </Box>
     )
 }

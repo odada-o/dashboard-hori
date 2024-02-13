@@ -17,11 +17,11 @@ const Util = () => {
     return (
         <Flex
             alignItems={'center'}
-            bg={'red'}
             h={61}
-            mt={2}
+            mt={{ sm: 2, md: 0 }}
             px={2}
             borderRadius={61}
+            bg={'white'}
             boxShadow={'0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color)'}
         >
             <InputGroup w={'50%'}>
@@ -32,16 +32,16 @@ const Util = () => {
             </InputGroup>
             <Spacer />
             <ButtonGroup w={'40%'}>
-                <Button variant="ghost" fontSize={18}>
+                <Button variant="icon">
                     <FaBars />
                     <span className="blind">전체메뉴 보기</span>
                 </Button>
-                <Button variant="ghost" fontSize={18}>
+                <Button variant="icon">
                     <FaRegBell />
                     <span className="blind">알림</span>
                 </Button>
                 <Button variant="ghost" w={'60px'}>
-                    <Avatar name="Prosper Otemuyiwa" src="https://bit.ly/prosper-baba" />
+                    <Avatar w={'40px'} h={'40px'} name="Prosper Otemuyiwa" src="https://bit.ly/prosper-baba" />
                 </Button>
             </ButtonGroup>
         </Flex>

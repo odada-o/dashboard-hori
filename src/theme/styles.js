@@ -39,17 +39,17 @@ export const globalStyles = {
             body: {
                 minW: '330px',
                 // overflowX: 'hidden',
-                // bg: mode('bgDefault', 'navy.900')(props),
                 fontFamily: '"DM Sans", "sans-serif"',
                 letterSpacing: '-0.5px',
                 fontSize: '16px',
                 fontWeight: '400',
                 lineHeight: '1.5',
                 color: mode('gray.900', 'white')(props),
-                bg: 'url("/bg-/m.png") no-repeat 50% 0 / 420px auto',
+                bg: mode('blue', 'navy.900')(props),
+                // bg: 'url("/bg-/m.png") no-repeat 50% 0 / 420px auto',
             },
             '#root': {
-                opacity: 0.7,
+                // opacity: 0.7,
             },
             input: {
                 color: 'gray.700',
