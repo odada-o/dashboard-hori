@@ -7,7 +7,6 @@ import { Container } from '@chakra-ui/react'
 const Home = () => {
     return (
         <>
-            <MainSlide />
             <Section isLightBackground={true}>
                 <Container>
                     <Title>회사 소개</Title>

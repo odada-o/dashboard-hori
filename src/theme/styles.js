@@ -46,10 +46,10 @@ export const globalStyles = {
                 fontWeight: '400',
                 lineHeight: '1.5',
                 color: mode('gray.900', 'white')(props),
-                bg: 'url("/bg-/pc.png") no-repeat 0 0 / 1790px auto',
+                bg: 'url("/bg-/m.png") no-repeat 50% 0 / 420px auto',
             },
             '#root': {
-                // opacity: 0.7,
+                opacity: 0.7,
             },
             input: {
                 color: 'gray.700',
@@ -62,6 +62,17 @@ export const globalStyles = {
             },
             '.chakra-container': {
                 maxWidth: 'calc(1280px + var(--chakra-space-4) * 2) !important',
+            },
+            '.blind': {
+                position: 'absolute',
+                width: 0,
+                height: 0,
+                margin: -1,
+                padding: 0,
+                overflow: 'hidden',
+                clip: 'rect(0, 0, 0, 0)',
+                border: 0,
+                lineHeight: 0,
             },
         }),
     },

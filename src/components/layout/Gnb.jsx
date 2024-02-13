@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Link as ReactRouterLink, useLocation } from 'react-router-dom'
 import { UnorderedList, ListItem, Link } from '@chakra-ui/react'
 import { FaCartShopping } from 'react-icons/fa6'
@@ -18,10 +17,8 @@ const Gnb = () => {
 
     const location = useLocation()
 
-    const [isSelected, setIsSelected] = useState(0)
-
     return (
-        <UnorderedList display={{ sm: 'none', xl: 'block' }} py={6} gap={'40px'} fontSize={'16px'}>
+        <UnorderedList py={6} gap={'40px'} fontSize={'16px'}>
             {navArr.map((item, index) => (
                 <ListItem key={index}>
                     <Link
@@ -34,7 +31,7 @@ const Gnb = () => {
                         p="9px 0 9px 20px"
                         sx={{
                             // 조건부 스타일 적용
-                            color: location.pathname === item.path ? 'primary' : 'inherit', // 색상 변경
+                            color: location.pathname === item.path ? 'red' : 'inherit', // 색상 변경
                             fontWeight: location.pathname === item.path ? 'bold' : 'inherit', // 글씨 굵기 변경
                             '&::after': {
                                 content: '""',
