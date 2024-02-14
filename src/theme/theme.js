@@ -11,6 +11,7 @@ import { linkStyles } from './components/link'
 import { breakpoints } from './foundations/breakpoints'
 import { globalStyles } from './styles'
 import { containerTheme } from './components/container'
+import { cardStyles } from './components/card'
 export default extendTheme(
     { breakpoints }, // Breakpoints
     globalStyles,
@@ -23,5 +24,6 @@ export default extendTheme(
     textareaStyles, // textarea styles
     switchStyles, // switch styles
     CardComponent, // card component
-    containerTheme
+    containerTheme,
+    cardStyles
 )
