@@ -18,7 +18,7 @@ const Home = () => {
                     value="$642.39"
                     startContent={<IconBox w={'56px'} h={'56px'} bg={'bgDefault'} icon={<FcDoughnutChart />} />}
                 />
-                <MiniSt name="Sales" value="$574.34" />
+                <MiniSt growth="10.39%" name="Sales" value="$574.34" />
                 <MiniSt
                     name="Your balance"
                     value="$1,000"

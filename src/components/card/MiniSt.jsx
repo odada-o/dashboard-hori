@@ -2,20 +2,19 @@ import { Box, Card, CardBody, Flex, Spacer, Stat, StatHelpText, StatLabel, StatN
 import { MdBarChart } from 'react-icons/md'
 
 const MiniSt = (props) => {
-    const { name, value, startContent, endContent } = props
+    const { name, value, startContent, endContent, growth } = props
 
     return (
-        <Card>
-            <CardBody>
-                <Flex>
-                    {startContent}
-                    <Stat ml={5}>
-                        <StatLabel>{name}</StatLabel>
-                        <StatNumber>{value}</StatNumber>
-                    </Stat>
-                    <Spacer />
-                    {endContent}
-                </Flex>
+        <Card h={116}>
+            <CardBody py={15} display={'flex'} alignItems={'center'}>
+                {startContent}
+                <Stat ml={startContent ? 5 : 0}>
+                    <StatLabel>{name}</StatLabel>
+                    <StatNumber>{value}</StatNumber>
+                    {growth ? <StatHelpText>{growth} 글씨추가 랄라랄라</StatHelpText> : null}
+                </Stat>
+                <Spacer />
+                {endContent}
             </CardBody>
         </Card>
     )
