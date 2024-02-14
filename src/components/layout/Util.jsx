@@ -18,7 +18,7 @@ const Util = () => {
         <Flex
             alignItems={'center'}
             h={61}
-            mt={{ sm: 2, md: 0 }}
+            mt={{ base: 2, md: 0 }}
             px={2}
             borderRadius={61}
             bg={'white'}

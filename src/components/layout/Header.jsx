@@ -9,7 +9,7 @@ const Header = () => {
             id="header"
             position={'fixed'}
             top={0}
-            left={{ sm: '-100%', xl: 0 }}
+            left={{ base: '-100%', xl: 0 }}
             bottom={0}
             zIndex={1000}
             transition={'left 0.3s'}

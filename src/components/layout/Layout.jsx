@@ -14,20 +14,21 @@ const Layout = () => {
                 as="main"
                 id="main"
                 flexGrow={1}
-                pl={{ sm: 0, xl: 292 }}
-                pt={{ sm: 100, xl: 100 }}
+                pl={{ base: '12px', xl: 312 }}
+                pr={{ base: '12px', xl: '12px' }}
+                pt={{ base: 200, md: 140 }}
                 transition={'all 0.2s'}
             >
                 <Stack
-                    direction={{ sm: 'column', md: 'row' }}
+                    direction={{ base: 'column', md: 'row' }}
                     justifyContent={'space-between'}
                     spacing={0}
                     pos={'fixed'}
                     top={'27px'}
-                    left={{ sm: '12px', xl: '310px' }}
+                    left={{ base: '12px', xl: '310px' }}
                     right={'12px'}
                     py={2}
-                    px={{ sm: 2, xl: 4 }}
+                    px={{ base: 2, xl: 4 }}
                     // bg={'rgba(255, 255, 255, 0.1)'}
                     bg={'rgba(255, 0, 0, 0.1)'}
                     backdropFilter={'blur(10px)'}
