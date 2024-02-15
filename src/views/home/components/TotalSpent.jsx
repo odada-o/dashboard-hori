@@ -26,7 +26,7 @@ class TotalSpent extends Component {
 
     render() {
         return (
-            <Card>
+            <Card display={'flex'} flexDir={'row'} justify={'space-between'}>
                 <CardHeader>
                     <Stat>
                         <StatLabel>Sent</StatLabel>
@@ -38,7 +38,7 @@ class TotalSpent extends Component {
                     </Stat>
                 </CardHeader>
                 <CardBody>
-                    <Chart options={this.state.options} series={this.state.series} type="line" width="500" />
+                    <Chart options={this.state.options} series={this.state.series} type="line" />
                 </CardBody>
             </Card>
         )

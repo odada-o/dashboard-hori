@@ -4,6 +4,7 @@ import IconBox from '../../components/icons/IconBox'
 import { MdBarChart } from 'react-icons/md'
 import { FcAreaChart, FcDoughnutChart, FcFlowChart, FcComboChart } from 'react-icons/fc'
 import TotalSpent from './components/TotalSpent'
+import Weekly from './components/Weekly'
 
 const Home = () => {
     return (
@@ -38,9 +39,7 @@ const Home = () => {
             </SimpleGrid>
             <SimpleGrid columns={{ base: 1, md: 2 }} spacing="20px" w={'100%'}>
                 <TotalSpent />
-                <Box bg="tomato" height="80px">
-                    ddd
-                </Box>
+                <Weekly />
             </SimpleGrid>
             <SimpleGrid columns={{ base: 1, md: 2 }} spacing="20px" w={'100%'}>
                 <Box bg="tomato" height="80px">
