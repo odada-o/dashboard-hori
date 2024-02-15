@@ -1,4 +1,5 @@
 import { Card, CardHeader, Checkbox, Table, TableContainer, Tbody, Td, Th, Thead, Tr } from '@chakra-ui/react'
+import { tableDataCheck } from '../../../variables/tables'
 
 const CheckTable = () => {
     return (
@@ -16,51 +17,18 @@ const CheckTable = () => {
                         </Tr>
                     </Thead>
                     <Tbody>
-                        <Tr>
-                            <Td>
-                                <Checkbox>Checkbox</Checkbox>
-                            </Td>
-                            <Td>inches</Td>
-                            <Td>millimetres (mm)</Td>
-                            <Td isNumeric>25.4</Td>
-                            <Td>12 Jan 2021</Td>
-                        </Tr>
-                        <Tr>
-                            <Td>
-                                <Checkbox defaultChecked>Checkbox</Checkbox>
-                            </Td>
-                            <Td>feet</Td>
-                            <Td>centimetres (cm)</Td>
-                            <Td isNumeric>30.48</Td>
-                            <Td>12 Jan 2021</Td>
-                        </Tr>
-                        <Tr>
-                            <Td>
-                                <Checkbox defaultChecked>Checkbox</Checkbox>
-                            </Td>
-                            <Td>yards</Td>
-                            <Td>metres (m)</Td>
-                            <Td isNumeric>0.91444</Td>
-                            <Td>12 Jan 2021</Td>
-                        </Tr>
-                        <Tr>
-                            <Td>
-                                <Checkbox defaultChecked>Checkbox</Checkbox>
-                            </Td>
-                            <Td>feet</Td>
-                            <Td>centimetres (cm)</Td>
-                            <Td isNumeric>30.48</Td>
-                            <Td>12 Jan 2021</Td>
-                        </Tr>
-                        <Tr>
-                            <Td>
-                                <Checkbox>Checkbox</Checkbox>
-                            </Td>
-                            <Td>yards</Td>
-                            <Td>metres (m)</Td>
-                            <Td isNumeric>0.91444</Td>
-                            <Td>12 Jan 2021</Td>
-                        </Tr>
+                        {/* element.map() */}
+                        {tableDataCheck.map((row, index) => (
+                            <Tr key={index}>
+                                <Td>
+                                    <Checkbox isChecked={row.checked} />
+                                </Td>
+                                <Td>{row.name}</Td>
+                                <Td>{row.progress}</Td>
+                                <Td isNumeric>{row.quantity}</Td>
+                                <Td>{row.date}</Td>
+                            </Tr>
+                        ))}
                     </Tbody>
                 </Table>
             </TableContainer>
