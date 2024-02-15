@@ -4,7 +4,7 @@ import LineChart from '../../../components/charts/LineChart'
 
 const Weekly = () => {
     return (
-        <Card display={'flex'} flexDir={'row'} justify={'space-between'}>
+        <Card display={'flex'}>
             <CardHeader>Weekly Revenue</CardHeader>
             <CardBody>
                 <LineChart chartData={lineChartDataTotalSpent} chartOptions={lineChartOptionsTotalSpent} />

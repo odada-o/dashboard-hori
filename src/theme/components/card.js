@@ -9,9 +9,6 @@ export const cardStyles = {
                     borderRadius: '20px',
                 },
             },
-            // variants: {
-            //     primary: (props) => ({}),
-            // },
         },
     },
 }
