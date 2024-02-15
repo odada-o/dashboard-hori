@@ -3,6 +3,7 @@ import MiniSt from '../../components/card/MiniSt'
 import IconBox from '../../components/icons/IconBox'
 import { MdBarChart } from 'react-icons/md'
 import { FcAreaChart, FcDoughnutChart, FcFlowChart, FcComboChart } from 'react-icons/fc'
+import TotalSpent from './components/TotalSpent'
 
 const Home = () => {
     return (
@@ -36,9 +37,7 @@ const Home = () => {
                 />
             </SimpleGrid>
             <SimpleGrid columns={{ base: 1, md: 2 }} spacing="20px" w={'100%'}>
-                <Box bg="tomato" height="80px">
-                    ddd
-                </Box>
+                <TotalSpent />
                 <Box bg="tomato" height="80px">
                     ddd
                 </Box>

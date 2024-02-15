@@ -31,7 +31,7 @@ const Gnb = () => {
                         p="9px 0 9px 20px"
                         sx={{
                             // 조건부 스타일 적용
-                            color: location.pathname === item.path ? 'red' : 'inherit', // 색상 변경
+                            color: location.pathname === item.path ? 'primary' : 'inherit', // 색상 변경
                             fontWeight: location.pathname === item.path ? 'bold' : 'inherit', // 글씨 굵기 변경
                             '&::after': {
                                 content: '""',
