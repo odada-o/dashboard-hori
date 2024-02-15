@@ -27,6 +27,7 @@ const Layout = () => {
                     top={'27px'}
                     left={{ base: '12px', xl: '310px' }}
                     right={'12px'}
+                    // zIndex={100}
                     py={2}
                     px={{ base: 2, xl: 4 }}
                     // bg={'rgba(255, 255, 255, 0.1)'}
