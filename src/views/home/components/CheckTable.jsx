@@ -1,4 +1,4 @@
-import { Card, CardHeader, Table, TableContainer, Tbody, Td, Th, Thead, Tr } from '@chakra-ui/react'
+import { Card, CardHeader, Checkbox, Table, TableContainer, Tbody, Td, Th, Thead, Tr } from '@chakra-ui/react'
 
 const CheckTable = () => {
     return (
@@ -8,6 +8,7 @@ const CheckTable = () => {
                 <Table variant="simple">
                     <Thead>
                         <Tr>
+                            <Th></Th>
                             <Th>NAME</Th>
                             <Th>PROGRESS</Th>
                             <Th isNumeric>QUANTITY</Th>
@@ -16,18 +17,45 @@ const CheckTable = () => {
                     </Thead>
                     <Tbody>
                         <Tr>
+                            <Td>
+                                <Checkbox>Checkbox</Checkbox>
+                            </Td>
                             <Td>inches</Td>
                             <Td>millimetres (mm)</Td>
                             <Td isNumeric>25.4</Td>
                             <Td>12 Jan 2021</Td>
                         </Tr>
                         <Tr>
+                            <Td>
+                                <Checkbox defaultChecked>Checkbox</Checkbox>
+                            </Td>
                             <Td>feet</Td>
                             <Td>centimetres (cm)</Td>
                             <Td isNumeric>30.48</Td>
                             <Td>12 Jan 2021</Td>
                         </Tr>
                         <Tr>
+                            <Td>
+                                <Checkbox defaultChecked>Checkbox</Checkbox>
+                            </Td>
+                            <Td>yards</Td>
+                            <Td>metres (m)</Td>
+                            <Td isNumeric>0.91444</Td>
+                            <Td>12 Jan 2021</Td>
+                        </Tr>
+                        <Tr>
+                            <Td>
+                                <Checkbox defaultChecked>Checkbox</Checkbox>
+                            </Td>
+                            <Td>feet</Td>
+                            <Td>centimetres (cm)</Td>
+                            <Td isNumeric>30.48</Td>
+                            <Td>12 Jan 2021</Td>
+                        </Tr>
+                        <Tr>
+                            <Td>
+                                <Checkbox>Checkbox</Checkbox>
+                            </Td>
                             <Td>yards</Td>
                             <Td>metres (m)</Td>
                             <Td isNumeric>0.91444</Td>

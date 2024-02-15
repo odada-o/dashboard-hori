@@ -5,8 +5,8 @@ export const TableStyles = {
             baseStyle: {
                 thead: {
                     th: {
-                        background: 'red',
-                        borderBottomWidth: '2px',
+                        fontSize: '12px',
+                        color: '#a0aec0',
                     },
                 },
             },
