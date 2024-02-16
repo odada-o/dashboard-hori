@@ -1,40 +1,63 @@
 import React from 'react'
 import { useTable, useSortBy } from 'react-table'
-import { Card, CardHeader, Checkbox, Table, TableContainer, Tbody, Td, Th, Thead, Tr } from '@chakra-ui/react'
-import { tableDataCheck } from '../../../variables/tables'
-import { FaAngleDown, FaAngleUp } from 'react-icons/fa6'
+import {
+    Box,
+    Card,
+    CardHeader,
+    Checkbox,
+    Progress,
+    Table,
+    TableContainer,
+    Tbody,
+    Td,
+    Th,
+    Thead,
+    Tr,
+} from '@chakra-ui/react'
+import { tableComplexData } from '../../../variables/tables'
+import { FaAngleDown, FaAngleUp, FaCheck, FaExclamation } from 'react-icons/fa6'
 import { TitleH2 } from '../../../components/common/Title'
+import { FaTimes } from 'react-icons/fa'
 
-const CheckTable = () => {
+const ComplexTable = () => {
     // tableDataCheck 배열
     // useMemo를 사용하여 데이터를 캐싱
     // useMemo를 사용하지 않으면 렌더링 될 때마다 데이터가 새로 생성되어 렌더링 성능에 영향을 줄 수 있음
-    const data = React.useMemo(() => tableDataCheck, [])
+    const data = React.useMemo(() => tableComplexData, [])
 
     // 컬럼 정의
     const columns = React.useMemo(
         () => [
             {
-                Header: '',
-                accessor: 'checked',
-                disableSortBy: true, // 체크박스 열은 정렬 비활성화
-                Cell: ({ value }) => <Checkbox isChecked={value} />,
-            },
-            {
                 Header: 'NAME',
                 accessor: 'name',
             },
             {
-                Header: 'PROGRESS',
-                accessor: 'progress',
-            },
-            {
-                Header: 'QUANTITY',
-                accessor: 'quantity',
+                Header: 'STATUS',
+                accessor: 'status',
+                // STATUS 열의 셀에 상태에 따른 아이콘과 텍스트를 렌더링
+                Cell: ({ value }) => (
+                    <Box display="flex" alignItems="center">
+                        {value === 'Approved' && <FaCheck color="green" />}
+                        {value === 'Disable' && <FaTimes color="red" />}
+                        {value === 'Error' && <FaExclamation color="orange" />}
+                        <span style={{ marginLeft: '10px' }}>{value}</span>
+                    </Box>
+                ),
             },
             {
                 Header: 'DATE',
                 accessor: 'date',
+            },
+            {
+                Header: 'PROGRESS',
+                accessor: 'progress',
+                // PROGRESS 열의 셀에 Progress 컴포넌트를 사용하여 진행 상태 바를 렌더링
+                Cell: ({ value }) => {
+                    // 문자열에서 숫자 부분만 추출하여 숫자 타입으로 변환
+                    const progressValue = parseInt(value, 10) // '70%'에서 70으로 변환
+                    return <Progress value={progressValue} colorScheme="blue" size="sm" />
+                },
             },
         ],
         []
@@ -55,7 +78,7 @@ const CheckTable = () => {
     return (
         <Card>
             <CardHeader>
-                <TitleH2>Check Table</TitleH2>
+                <TitleH2>Complex Table</TitleH2>
             </CardHeader>
             <TableContainer>
                 <Table variant="simple" {...getTableProps()}>
@@ -99,4 +122,4 @@ const CheckTable = () => {
     )
 }
 
-export default CheckTable
+export default ComplexTable

@@ -1,19 +1,19 @@
 import { Card, CardBody, CardHeader } from '@chakra-ui/react'
-import { lineChartDataTotalSpent, lineChartOptionsTotalSpent } from '../../../variables/charts'
-import LineChart from '../../../components/charts/LineChart'
 import { TitleH2 } from '../../../components/common/Title'
+import ColumnChart from '../../../components/charts/BarChart'
+import { barChartDataDailyTraffic, barChartOptionsDailyTraffic } from '../../../variables/charts'
 
-const Weekly = () => {
+const DailyTraffic = () => {
     return (
         <Card display={'flex'}>
             <CardHeader>
                 <TitleH2>Weekly Revenue</TitleH2>
             </CardHeader>
             <CardBody>
-                <LineChart chartData={lineChartDataTotalSpent} chartOptions={lineChartOptionsTotalSpent} />
+                <ColumnChart chartData={barChartDataDailyTraffic} chartOptions={barChartOptionsDailyTraffic} />
             </CardBody>
         </Card>
     )
 }
 
-export default Weekly
+export default DailyTraffic

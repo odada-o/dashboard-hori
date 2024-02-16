@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import { Card, CardBody, CardHeader, Stat, StatArrow, StatHelpText, StatLabel, StatNumber } from '@chakra-ui/react'
 import Chart from 'react-apexcharts'
+import ColumnChart from '../../../components/charts/BarChart'
+import { barChartDataConsumption, barChartOptionsConsumption } from '../../../variables/charts'
+import { TitleH2 } from '../../../components/common/Title'
 
 class TotalSpent extends Component {
     constructor(props) {
@@ -29,7 +32,9 @@ class TotalSpent extends Component {
             <Card display={'flex'} flexDir={'row'} justify={'space-between'}>
                 <CardHeader>
                     <Stat>
-                        <StatLabel>Sent</StatLabel>
+                        <StatLabel>
+                            <TitleH2>Sent</TitleH2>
+                        </StatLabel>
                         <StatNumber>345,670</StatNumber>
                         <StatHelpText>
                             <StatArrow type="increase" />
@@ -38,7 +43,8 @@ class TotalSpent extends Component {
                     </Stat>
                 </CardHeader>
                 <CardBody>
-                    <Chart options={this.state.options} series={this.state.series} type="line" />
+                    <ColumnChart chartData={barChartDataConsumption} chartOptions={barChartOptionsConsumption} />
+                    {/* <Chart options={this.state.options} series={this.state.series} type="line" /> */}
                 </CardBody>
             </Card>
         )

@@ -17,6 +17,7 @@ const Layout = () => {
                 pl={{ base: '12px', xl: 312 }}
                 pr={{ base: '12px', xl: '12px' }}
                 pt={{ base: 200, md: 140 }}
+                pb={{ base: 50 }}
                 transition={'all 0.2s'}
             >
                 <Stack

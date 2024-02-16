@@ -6,6 +6,10 @@ import { FcAreaChart, FcDoughnutChart, FcFlowChart, FcComboChart } from 'react-i
 import TotalSpent from './components/TotalSpent'
 import Weekly from './components/Weekly'
 import CheckTable from './components/CheckTable'
+import DailyTraffic from './components/DailyTraffic'
+import PieCard from './components/PieCard'
+import ComplexTable from './components/ComplexTable'
+import ComplexTableComm from './components/ComplexTableComm'
 
 const Home = () => {
     return (
@@ -45,14 +49,23 @@ const Home = () => {
             <SimpleGrid columns={{ base: 1, md: 2 }} spacing="20px" w={'100%'}>
                 <CheckTable />
                 <SimpleGrid columns={{ base: 1, md: 2 }} spacing="20px" w={'100%'}>
-                    <Card>ddd</Card>
-                    <Card>ddd</Card>
+                    <DailyTraffic />
+                    <PieCard />
                 </SimpleGrid>
             </SimpleGrid>
             <SimpleGrid columns={{ base: 1, md: 2 }} spacing="20px" w={'100%'}>
-                <Box bg="tomato" height="80px">
-                    ddd
-                </Box>
+                <ComplexTable />
+                <SimpleGrid columns={{ base: 1, md: 2 }} spacing="20px" w={'100%'}>
+                    <Box bg="tomato" height="80px">
+                        ddd
+                    </Box>
+                    <Box bg="tomato" height="80px">
+                        ddd
+                    </Box>
+                </SimpleGrid>
+            </SimpleGrid>
+            <SimpleGrid columns={{ base: 1, md: 2 }} spacing="20px" w={'100%'}>
+                <ComplexTableComm />
                 <SimpleGrid columns={{ base: 1, md: 2 }} spacing="20px" w={'100%'}>
                     <Box bg="tomato" height="80px">
                         ddd

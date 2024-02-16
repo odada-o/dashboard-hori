@@ -8,6 +8,14 @@ const Title = (props) => {
     )
 }
 
+export const TitleH2 = (props) => {
+    return (
+        <Heading as={'h2'} fontSize={'1.25rem'} fontWeight={700}>
+            {props.children}
+        </Heading>
+    )
+}
+
 export const TitleH4 = (props) => {
     return (
         <Heading as={'h4'} my={30} fontSize={20} fontWeight={700} color={'darkblue'}>
