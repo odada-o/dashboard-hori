@@ -1,22 +1,20 @@
 import React from 'react'
-import { useTable, useSortBy } from 'react-table'
+import { useTable } from 'react-table'
 import { Card, CardHeader, Checkbox, Table, TableContainer, Tbody, Td, Th, Thead, Tr } from '@chakra-ui/react'
-import { tableDataCheck } from '../../../variables/tables'
-import { FaAngleDown, FaAngleUp } from 'react-icons/fa6'
 
 const CheckTable = () => {
-    // tableDataCheck 배열
-    // useMemo를 사용하여 데이터를 캐싱
-    // useMemo를 사용하지 않으면 렌더링 될 때마다 데이터가 새로 생성되어 렌더링 성능에 영향을 줄 수 있음
-    const data = React.useMemo(() => tableDataCheck, [])
+    const data = React.useMemo(
+        () => [
+            /* tableDataCheck 배열 */
+        ],
+        []
+    )
 
-    // 컬럼 정의
     const columns = React.useMemo(
         () => [
             {
                 Header: '',
                 accessor: 'checked',
-                disableSortBy: true, // 체크박스 열은 정렬 비활성화
                 Cell: ({ value }) => <Checkbox isChecked={value} />,
             },
             {
@@ -39,17 +37,7 @@ const CheckTable = () => {
         []
     )
 
-    // useTable 훅을 사용하여 테이블 인스턴스 생성
-    // useSortBy 훅을 사용하여 정렬 기능 추가
-    const tableInstance = useTable({ columns, data }, useSortBy)
-
-    // 테이블 인스턴스에서 필요한 속성 추출
-    // getTableProps: 테이블 요소에 필요한 props
-    // getTableBodyProps: 테이블 바디 요소에 필요한 props
-    // headerGroups: 헤더 그룹에 대한 정보
-    // rows: 테이블 데이터
-    // prepareRow: 행에 필요한 props
-    const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } = tableInstance
+    const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } = useTable({ columns, data })
 
     return (
         <Card>
@@ -57,18 +45,11 @@ const CheckTable = () => {
             <TableContainer>
                 <Table variant="simple" {...getTableProps()}>
                     <Thead>
-                        {/* 헤더 그룹 렌더링 */}
                         {headerGroups.map((headerGroup) => (
-                            // 헤더 그룹에 필요한 props
                             <Tr {...headerGroup.getHeaderGroupProps()}>
                                 {headerGroup.headers.map((column) => (
-                                    <Th
-                                        {...column.getHeaderProps(column.getSortByToggleProps())}
-                                        isNumeric={column.isNumeric}
-                                    >
+                                    <Th {...column.getHeaderProps()} isNumeric={column.isNumeric}>
                                         {column.render('Header')}
-                                        {/* 정렬 방향 표시 */}
-                                        {column.isSorted ? column.isSortedDesc ? <FaAngleDown /> : <FaAngleUp /> : ''}
                                     </Th>
                                 ))}
                             </Tr>

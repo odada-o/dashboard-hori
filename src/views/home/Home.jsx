@@ -1,4 +1,4 @@
-import { Box, SimpleGrid, VStack } from '@chakra-ui/react'
+import { Box, Card, SimpleGrid, VStack } from '@chakra-ui/react'
 import MiniSt from '../../components/card/MiniSt'
 import IconBox from '../../components/icons/IconBox'
 import { MdBarChart } from 'react-icons/md'
@@ -45,12 +45,8 @@ const Home = () => {
             <SimpleGrid columns={{ base: 1, md: 2 }} spacing="20px" w={'100%'}>
                 <CheckTable />
                 <SimpleGrid columns={{ base: 1, md: 2 }} spacing="20px" w={'100%'}>
-                    <Box bg="tomato" height="80px">
-                        ddd
-                    </Box>
-                    <Box bg="tomato" height="80px">
-                        ddd
-                    </Box>
+                    <Card>ddd</Card>
+                    <Card>ddd</Card>
                 </SimpleGrid>
             </SimpleGrid>
             <SimpleGrid columns={{ base: 1, md: 2 }} spacing="20px" w={'100%'}>
