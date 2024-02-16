@@ -31,7 +31,7 @@ const CheckTableComm = () => {
                                 </Td>
                                 <Td>{row.date}</Td>
                                 <Td>
-                                    <Progress value={row.progress} />
+                                    <Progress value={parseInt(row.progress, 10)} />
                                 </Td>
                             </Tr>
                         ))}
