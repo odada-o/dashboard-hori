@@ -11,6 +11,7 @@ import PieCard from './components/PieCard'
 import ComplexTable from './components/ComplexTable'
 import ComplexTableComm from './components/ComplexTableComm'
 import Tasks from './components/Tasks'
+import MiniCalendar from '../../components/calendar/MiniCalendar'
 
 const Home = () => {
     return (
@@ -58,9 +59,7 @@ const Home = () => {
                 <ComplexTable />
                 <SimpleGrid columns={{ base: 1, md: 2 }} spacing="20px" w={'100%'}>
                     <Tasks />
-                    <Box bg="tomato" height="80px">
-                        ddd
-                    </Box>
+                    <MiniCalendar />
                 </SimpleGrid>
             </SimpleGrid>
             <SimpleGrid columns={{ base: 1, md: 2 }} spacing="20px" w={'100%'}>
