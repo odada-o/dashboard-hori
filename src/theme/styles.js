@@ -7,7 +7,7 @@ export const variablesC = {
 
 export const globalStyles = {
     colors: {
-        primary: '#422AFB',
+        primary: '#422afb',
         pirmaryLight: lighten(0.1, '#422AFB'),
         secondary: '#83D9FB',
         secondaryLight: lighten(0.1, '#83D9FB'),
