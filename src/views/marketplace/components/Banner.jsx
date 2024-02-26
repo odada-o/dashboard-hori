@@ -35,7 +35,7 @@ const ButtonStyle = styled.button`
     border-radius: 0.75rem;
     font-size: 16px;
     background: ${(props) => (props.$white ? 'white' : '')};
-    color: ${(props) => (props.$white ? 'black' : 'white')};
+    color: ${(props) => (props.$white ? ({ theme }) => theme.colors.primary : 'white')};
 `
 
 const SwiperStyle = styled(Swiper)`
