@@ -6,7 +6,7 @@ import 'swiper/css/pagination'
 
 import { Pagination } from 'swiper/modules'
 import styled from 'styled-components'
-import { Box, Button, Flex, Heading, Text } from '@chakra-ui/react'
+import { Box, Flex, Heading, Text } from '@chakra-ui/react'
 
 const Banner = () => {
     return (
@@ -23,8 +23,30 @@ const Banner = () => {
                     </Flex>
                 </Box>
             </SwiperSlide>
-            <SwiperSlide>Slide 2</SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
+            <SwiperSlide>
+                <Box className="slide-box" bg={'secondary'}>
+                    <Heading className="slide-title">Discover, collect, and sell extraordinary NFTs</Heading>
+                    <Text className="slide-text">
+                        Enter in this creative world. Discover now the latest NFTs or start creating your own!
+                    </Text>
+                    <Flex className="btn-area">
+                        <ButtonStyle $white>Discover now</ButtonStyle>
+                        <ButtonStyle>Watch Video</ButtonStyle>
+                    </Flex>
+                </Box>
+            </SwiperSlide>
+            <SwiperSlide>
+                <Box className="slide-box" bg={'tertiary'}>
+                    <Heading className="slide-title">Discover, collect, and sell extraordinary NFTs</Heading>
+                    <Text className="slide-text">
+                        Enter in this creative world. Discover now the latest NFTs or start creating your own!
+                    </Text>
+                    <Flex className="btn-area">
+                        <ButtonStyle $white>Discover now</ButtonStyle>
+                        <ButtonStyle>Watch Video</ButtonStyle>
+                    </Flex>
+                </Box>
+            </SwiperSlide>
         </SwiperStyle>
     )
 }

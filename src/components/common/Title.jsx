@@ -16,6 +16,14 @@ export const TitleH2 = (props) => {
     )
 }
 
+export const TitleH3 = (props) => {
+    return (
+        <Heading as={'h2'} mb={5} fontSize={'24px'} fontWeight={700}>
+            {props.children}
+        </Heading>
+    )
+}
+
 export const TitleH4 = (props) => {
     return (
         <Heading as={'h4'} my={30} fontSize={20} fontWeight={700} color={'darkblue'}>
