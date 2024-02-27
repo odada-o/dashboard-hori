@@ -1,13 +1,16 @@
+import React, { useState } from 'react'
 import { Avatar, AvatarGroup, Box, Button, Card, Flex, Image, Link, Text } from '@chakra-ui/react'
-import { IoHear, IoHeartOutline } from 'react-icons/io5'
+import { IoHeart, IoHeartOutline } from 'react-icons/io5'
 
 const Nft = (props) => {
     const { name, author, bidders, image, currentbid, download } = props
 
+    const [heart, setHeart] = useState(false)
+
     return (
         <Card>
             <Flex direction={'column'} justify={'center'} p={'1rem'}>
-                <Box pos={'relative'} borderRadius={'xl'} overflow={'hidden'}>
+                <Box pos={'relative'} h={188} borderRadius={'xl'} overflow={'hidden'}>
                     <Image src={image} alt="NFT" w={'100%'} h={'100%'} objectFit={'cover'} />
                     <Button
                         variant="link"
@@ -20,23 +23,13 @@ const Nft = (props) => {
                         fontSize={24}
                         bg={'white'}
                         color={'primary'}
+                        onClick={() => setHeart(!heart)}
                     >
-                        {/* <IoHeart /> */}
-                        <IoHeartOutline />
+                        {heart ? <IoHeart /> : <IoHeartOutline />}
                     </Button>
                 </Box>
-                <Flex flexDirection="column" justify="space-between" h="100%">
-                    <Flex
-                        justify="space-between"
-                        direction={{
-                            base: 'row',
-                            md: 'column',
-                            lg: 'row',
-                            xl: 'column',
-                            '2xl': 'row',
-                        }}
-                        mb="auto"
-                    >
+                <Flex flexDirection="column" justify="space-between" mt={3}>
+                    <Flex justify="space-between" mb="auto">
                         <Flex direction="column">
                             <Text
                                 fontSize={{
@@ -82,42 +75,12 @@ const Nft = (props) => {
                             ))}
                         </AvatarGroup>
                     </Flex>
-                    <Flex
-                        align="start"
-                        justify="space-between"
-                        direction={{
-                            base: 'row',
-                            md: 'column',
-                            lg: 'row',
-                            xl: 'column',
-                            '2xl': 'row',
-                        }}
-                        mt="25px"
-                    >
-                        <Text fontWeight="700" fontSize="sm">
+                    <Flex align="center" justify="space-between" mt="30px">
+                        <Text fontWeight="700" fontSize="sm" color={'primary'}>
                             Current Bid: {currentbid}
                         </Text>
-                        <Link
-                            href={download}
-                            mt={{
-                                base: '0px',
-                                md: '10px',
-                                lg: '0px',
-                                xl: '10px',
-                                '2xl': '0px',
-                            }}
-                        >
-                            <Button
-                                variant="darkBrand"
-                                color="white"
-                                fontSize="sm"
-                                fontWeight="500"
-                                borderRadius="70px"
-                                px="24px"
-                                py="5px"
-                            >
-                                Place Bid
-                            </Button>
+                        <Link href={download}>
+                            <Button variant="btnMarket">Place Bid</Button>
                         </Link>
                     </Flex>
                 </Flex>

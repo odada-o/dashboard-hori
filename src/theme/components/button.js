@@ -15,6 +15,24 @@ export const buttonStyles = {
                 },
             },
             variants: {
+                btnMarket: () => ({
+                    bg: 'primary',
+                    color: 'white',
+                    fontWeight: '500',
+                    borderRadius: '70px',
+                    px: '24px',
+                    py: '5px',
+                    fontSize: 'sm',
+                    _focus: {
+                        bg: 'secondary',
+                    },
+                    _active: {
+                        bg: 'secondary',
+                    },
+                    _hover: {
+                        bg: 'secondary',
+                    },
+                }),
                 icon: () => ({
                     w: '45px',
                     h: '45px',

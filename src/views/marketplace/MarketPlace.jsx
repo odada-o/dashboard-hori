@@ -5,11 +5,11 @@ import { TitleH3 } from '../../components/common/Title'
 import Nft from '../../components/card/Nft'
 
 import Nft1 from 'assets/img/nfts/Nft1.png'
-// import Nft2 from 'assets/img/nfts/Nft2.png'
-// import Nft3 from 'assets/img/nfts/Nft3.png'
-// import Nft4 from 'assets/img/nfts/Nft4.png'
-// import Nft5 from 'assets/img/nfts/Nft5.png'
-// import Nft6 from 'assets/img/nfts/Nft6.png'
+import Nft2 from 'assets/img/nfts/Nft2.png'
+import Nft3 from 'assets/img/nfts/Nft3.png'
+import Nft4 from 'assets/img/nfts/Nft4.png'
+import Nft5 from 'assets/img/nfts/Nft5.png'
+import Nft6 from 'assets/img/nfts/Nft6.png'
 import Avatar1 from 'assets/img/avatars/avatar1.png'
 import Avatar2 from 'assets/img/avatars/avatar2.png'
 import Avatar3 from 'assets/img/avatars/avatar3.png'
@@ -48,14 +48,52 @@ const MarketPlace = () => {
                                     currentbid="0.91 ETH"
                                     download="#"
                                 />
-                                <Box w="100%" h="100" bg="blue.500"></Box>
-                                <Box w="100%" h="100" bg="blue.500"></Box>
-                                <Box w="100%" h="100" bg="blue.500"></Box>
+                                <Nft
+                                    name="Abstract Colors"
+                                    author="By Esthera Jackson"
+                                    bidders={[Avatar1, Avatar2, Avatar3, Avatar4, Avatar1, Avatar1, Avatar1, Avatar1]}
+                                    image={Nft2}
+                                    currentbid="0.91 ETH"
+                                    download="#"
+                                />
+                                <Nft
+                                    name="Abstract Colors"
+                                    author="By Esthera Jackson"
+                                    bidders={[Avatar1, Avatar2, Avatar3, Avatar4, Avatar1, Avatar1, Avatar1, Avatar1]}
+                                    image={Nft3}
+                                    currentbid="0.91 ETH"
+                                    download="#"
+                                />
                             </SimpleGrid>
                         </Box>
                         <Box>
                             <TitleH3>Recently Added</TitleH3>
-                            <Box w="100%" h="100" bg="blue.500"></Box>
+                            <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={6}>
+                                <Nft
+                                    name="Abstract Colors"
+                                    author="By Esthera Jackson"
+                                    bidders={[Avatar1, Avatar2, Avatar3, Avatar4, Avatar1, Avatar1, Avatar1, Avatar1]}
+                                    image={Nft4}
+                                    currentbid="0.91 ETH"
+                                    download="#"
+                                />
+                                <Nft
+                                    name="Abstract Colors"
+                                    author="By Esthera Jackson"
+                                    bidders={[Avatar1, Avatar2, Avatar3, Avatar4, Avatar1, Avatar1, Avatar1, Avatar1]}
+                                    image={Nft5}
+                                    currentbid="0.91 ETH"
+                                    download="#"
+                                />
+                                <Nft
+                                    name="Abstract Colors"
+                                    author="By Esthera Jackson"
+                                    bidders={[Avatar1, Avatar2, Avatar3, Avatar4, Avatar1, Avatar1, Avatar1, Avatar1]}
+                                    image={Nft6}
+                                    currentbid="0.91 ETH"
+                                    download="#"
+                                />
+                            </SimpleGrid>
                         </Box>
                     </Flex>
                 </Flex>
