@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dashboard-hori/static/css/main.e5eb6f29.css",
-    "main.js": "/dashboard-hori/static/js/main.e4fc38c4.js",
+    "main.js": "/dashboard-hori/static/js/main.afab686e.js",
     "static/media/Nft2.png": "/dashboard-hori/static/media/Nft2.7897c45d2601ee3adfb5.png",
     "static/media/avatar2.png": "/dashboard-hori/static/media/avatar2.5692c39db4f8c0ea999e.png",
     "static/media/avatar3.png": "/dashboard-hori/static/media/avatar3.9f646ac5920fa40adf00.png",
@@ -14,10 +14,10 @@
     "static/media/Nft5.png": "/dashboard-hori/static/media/Nft5.62dbaf7dd91b4180035c.png",
     "index.html": "/dashboard-hori/index.html",
     "main.e5eb6f29.css.map": "/dashboard-hori/static/css/main.e5eb6f29.css.map",
-    "main.e4fc38c4.js.map": "/dashboard-hori/static/js/main.e4fc38c4.js.map"
+    "main.afab686e.js.map": "/dashboard-hori/static/js/main.afab686e.js.map"
   },
   "entrypoints": [
     "static/css/main.e5eb6f29.css",
-    "static/js/main.e4fc38c4.js"
+    "static/js/main.afab686e.js"
   ]
 }
