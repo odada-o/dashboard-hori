@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter as Router, Route, Routes } from 'react-router-dom'
 import Home from './views/home/Home'
 import MarketPlace from './views/marketplace/MarketPlace'
 import DataTables from './views/datatables/DataTables'
@@ -33,7 +33,7 @@ const routeArr = [
 
 const Routers = () => {
     return (
-        <BrowserRouter>
+        <Router>
             <Routes>
                 <Route element={<Layout />}>
                     <Route path="/" element={<Home />} />
@@ -46,7 +46,7 @@ const Routers = () => {
                     <Route path="/signin" element={<Signin />} />
                 </Route>
             </Routes>
-        </BrowserRouter>
+        </Router>
     )
 }
 

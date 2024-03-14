@@ -1,4 +1,5 @@
-import { Box, Card, SimpleGrid, VStack } from '@chakra-ui/react'
+import React, { useEffect, useState } from 'react'
+import { Box, Button, Card, SimpleGrid, VStack } from '@chakra-ui/react'
 import MiniSt from '../../components/card/MiniSt'
 import IconBox from '../../components/icons/IconBox'
 import { MdBarChart } from 'react-icons/md'
@@ -14,8 +15,35 @@ import Tasks from './components/Tasks'
 import MiniCalendar from '../../components/calendar/MiniCalendar'
 
 const Home = () => {
+    const [color, setColor] = useState('yellow')
+    // useEffect(함수, [의존성 배열])
+    // 1. 컴포넌트가 마운트(탄생) 할 때 배경색 노랑색으로 변경
+    useEffect(() => {
+        console.log('색상이 변경됨', color)
+        document.body.style.backgroundColor = color
+        document.body.id = 'intro'
+        document.body.classList.add('intro')
+
+        // 2. 컴포넌트가 언마운트(소멸) 될 때 배경색 원래대로 변경
+        return () => {
+            document.body.style.backgroundColor = ''
+            document.body.id = ''
+            document.body.classList.remove('intro')
+        }
+    }, [color])
+
+    // Updating
+    // 3. 업데이트 : 버튼 클릭시 배경색 변경
+    const toggleColor = () => {
+        setColor((prevColor) => (prevColor === 'yellow' ? 'blue' : 'yellow'))
+    }
+    // color가 변경될 때마다 함수 실행
+    // 데이터가 변경될 때마다 함수가 실행
+    // useEffect(() => {}, [color])
+
     return (
         <VStack spacing={5}>
+            <Button onClick={toggleColor}>배경색 변경</Button>
             <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing="20px" w={'100%'}>
                 <MiniSt
                     name="Earnings"

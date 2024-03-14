@@ -1,60 +1,64 @@
 {
-  "name": "dashboard-hori",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@chakra-ui/icons": "^2.1.1",
-    "@chakra-ui/react": "^2.8.2",
-    "@chakra-ui/theme-tools": "^2.1.2",
-    "@emotion/react": "^11.11.3",
-    "@emotion/styled": "^11.11.0",
-    "@fortawesome/fontawesome-svg-core": "^6.5.1",
-    "@fortawesome/free-solid-svg-icons": "^6.5.1",
-    "@fortawesome/react-fontawesome": "^0.2.0",
-    "@react-icons/all-files": "^4.1.0",
-    "@tanstack/react-table": "^8.12.0",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "apexcharts": "^3.45.2",
-    "framer-motion": "^11.0.3",
-    "gsap": "^3.12.5",
-    "node-sass": "^9.0.0",
-    "polished": "^4.2.2",
-    "react": "^18.2.0",
-    "react-apexcharts": "^1.4.1",
-    "react-calendar": "^4.8.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^5.0.1",
-    "react-router-dom": "^6.21.3",
-    "react-scripts": "5.0.1",
-    "react-table": "^7.8.0",
-    "styled-components": "^6.1.8",
-    "swiper": "^11.0.5",
-    "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "homepage": "https://oddodd.io/dashboard-hori",
+    "name": "dashboard-hori",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@chakra-ui/icons": "^2.1.1",
+        "@chakra-ui/react": "^2.8.2",
+        "@chakra-ui/theme-tools": "^2.1.2",
+        "@emotion/react": "^11.11.3",
+        "@emotion/styled": "^11.11.0",
+        "@fortawesome/fontawesome-svg-core": "^6.5.1",
+        "@fortawesome/free-solid-svg-icons": "^6.5.1",
+        "@fortawesome/react-fontawesome": "^0.2.0",
+        "@react-icons/all-files": "^4.1.0",
+        "@tanstack/react-table": "^8.12.0",
+        "@testing-library/jest-dom": "^5.17.0",
+        "@testing-library/react": "^13.4.0",
+        "@testing-library/user-event": "^13.5.0",
+        "apexcharts": "^3.45.2",
+        "framer-motion": "^11.0.3",
+        "gh-pages": "^6.1.1",
+        "gsap": "^3.12.5",
+        "node-sass": "^9.0.0",
+        "polished": "^4.2.2",
+        "react": "^18.2.0",
+        "react-apexcharts": "^1.4.1",
+        "react-calendar": "^4.8.0",
+        "react-dom": "^18.2.0",
+        "react-icons": "^5.0.1",
+        "react-router-dom": "^6.21.3",
+        "react-scripts": "5.0.1",
+        "react-table": "^7.8.0",
+        "styled-components": "^6.1.8",
+        "swiper": "^11.0.5",
+        "web-vitals": "^2.1.4"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
 }
